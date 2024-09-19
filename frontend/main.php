@@ -11,9 +11,9 @@
     include('partials/header.php')
     ?>
   
-  <div id="animateMe" class="w-full opacity-0 transition-opacity duration-500 backdrop-blur z-20">
+  <div data-aos="zoom-in-down" data-aos-duration="3000" class="w-full">
     <?php include('./backend/weatherapi.php') ?>
-      <div class="p-5">
+      <div  class="p-5">
         <div class="rounded-xl border p-2 shadow-xl flex flex-col gap-10 bg-white text-black bg-opacity-30">
           <div class="flex flex-row justify-between items-center">
             <div class="flex items-center"><span class="material-symbols-outlined">location_on</span>
@@ -47,14 +47,14 @@
 
     <!-- Air Quality Section -->
     <div id="animateMe"  class="px-3 flex-col flex gap-5 my-10 rounded-xl mx-2">
-      <div class="text-md mx-auto w-full flex justify-between bg-black bg-opacity-50 px-3 rounded-xl py-2">
+      <div data-aos="flip-right" data-aos-duration="1500" class="text-md mx-auto w-full flex justify-between bg-black bg-opacity-50 px-3 rounded-xl py-2">
         <div class="flex items-center"><span class="material-symbols-outlined mx-1 text-green-600">temp_preferences_eco</span>AQI</div>
         <div><span class="text-gray-400 text-sm">Air Quality is good. A prefer day for a walk</span> </div>
       </div>
 
       <div class="gap-10 flex flex-col pb-10">
         <div class="flex justify-around items-center gap-5">
-          <div id="animateMe" class="border bg-black bg-opacity-25 p-3 rounded-xl w-1/2">
+          <div data-aos="fade-right" data-aos-duration="1500" id="animateMe" class="border bg-black bg-opacity-25 p-3 rounded-xl w-1/2">
             <div class="">
               <div class="">
                   <h1>
@@ -90,7 +90,7 @@
             </div>
           </div>
 
-          <div class="border bg-black bg-opacity-25 p-3 rounded-xl w-1/2">
+          <div data-aos="fade-left" data-aos-duration="1500" class="border bg-black bg-opacity-25 p-3 rounded-xl w-1/2">
             <div class="">
               <div class="">
                   <h1>
@@ -130,7 +130,7 @@
         </div>
 
         <div class="flex justify-around items-center gap-5">
-          <div class="border bg-black bg-opacity-25 p-3 rounded-xl w-1/2">
+          <div data-aos="fade-right" data-aos-duration="1500" class="border bg-black bg-opacity-25 p-3 rounded-xl w-1/2">
             <div class="">
               <div class="">
                   <h1>
@@ -166,7 +166,7 @@
             </div>
           </div>
 
-          <div class="border bg-black bg-opacity-25 p-3 rounded-xl w-1/2">
+          <div data-aos="fade-left" data-aos-duration="1500" class="border bg-black bg-opacity-25 p-3 rounded-xl w-1/2">
             <div class="">
               <div class="">
                   <h1>
@@ -206,7 +206,7 @@
         </div>
 
         <div class="flex justify-around items-center gap-5">
-          <div class="border bg-black bg-opacity-25 p-3 rounded-xl w-1/2">
+          <div data-aos="fade-right" data-aos-duration="1500" class="border bg-black bg-opacity-25 p-3 rounded-xl w-1/2">
             <div class="">
               <div class="">
                   <h1>
@@ -242,7 +242,7 @@
             </div>
           </div>
 
-          <div class="border bg-black bg-opacity-25 p-3 rounded-xl w-1/2">
+          <div data-aos="fade-left" data-aos-duration="1500" class="border bg-black bg-opacity-25 p-3 rounded-xl w-1/2">
             <div class="">
               <div class="">
                   <h1>

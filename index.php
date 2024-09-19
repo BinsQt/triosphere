@@ -10,6 +10,9 @@
     <script src="frontend/js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 
 
@@ -38,10 +41,16 @@
             backgroundImage: {
                 'smoke': "url('frontend/img/smoke.png')",
 
-               }
+               },
+               colors: {
+                primary: 'rgba(21,29,52,1)',
+    }
         }
       }
     }
+
+    AOS.init();
+
   </script>
   
 </body>

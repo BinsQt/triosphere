@@ -10,4 +10,9 @@ body {
     font-weight: 400;
     font-style: normal;
   }
+
+  .gra{
+    background-image: linear-gradient(0deg, rgba(21,29,52,1) 0%, rgba(33,66,194,1) 64%);
+
+  }
   
