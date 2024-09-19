@@ -1,10 +1,3 @@
-<?php
-  // include("./backend/connection.php");
-
-  // $select = "SELECT * FROM mq9 ";
-
-?>
-
 <div class="sm:container sm:mb-10 font-primary">
   
     <?php 
@@ -90,41 +83,37 @@
             </div>
           </div>
 
-          <div data-aos="fade-left" data-aos-duration="1500" class="border bg-black bg-opacity-25 p-3 rounded-xl w-1/2">
-            <div class="">
-              <div class="">
-                  <h1>
-                    Carbon Monoxide
-                  </h1>
-                </div>
+              <?php
+                  // Read the JSON file
+                  $json_data = file_get_contents('backend/data.json');
 
+                  // Decode the JSON data into a PHP array
+                  $data = json_decode($json_data, true);
 
-              <div class="flex justify-between items-center">
-                <div class="">
-                  <img width="50" height="50" src="https://img.icons8.com/ios/50/co2.png" alt="co2"/>
-                </div>
-                <div>
-                <span class="text-6xl">30<span class="text-sm">PPM</span></span>                 
-                <?php 
-                
-                  // $result = mysqli_query($conn, $select);
+                  // Check if the data is an array and not null
+                  if (is_array($data)) {
+                      ?>
+                      <div data-aos="fade-left" data-aos-duration="1500" class="border bg-black bg-opacity-25 p-3 rounded-xl w-1/2">
+                          <div class="">
+                              <div class="">
+                                  <h1>Carbon Monoxide</h1>
+                              </div>
+                              <div class="flex justify-between items-center">
+                                  <div class="">
+                                      <img width="50" height="50" src="https://img.icons8.com/ios/50/co2.png" alt="co2"/>
+                                  </div>
+                                  <div>
+                                  <span class="text-6xl"><?php echo htmlspecialchars($data['carbon_monoxide']); ?><span class="text-sm">PPM</span></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                <?php
+              } else {
+                  echo "Data is not an array or is null.";
+              }
+            ?>
 
-                  // if ($result->num_rows > 0){
-                                    
-                                
-                  //   while($row = mysqli_fetch_assoc($result)) {
-                  //       $co = $row["co"];
-
-                  //       echo $co ." ". "ppm";
-                  //   }
-                  // }
-                ?>
-                </div>
-
-
-              </div>
-            </div>
-          </div>
 
 
         </div>
@@ -256,7 +245,7 @@
                   <img width="50" height="50" src="https://img.icons8.com/ios/50/co2.png" alt="co2"/>
                 </div>
                 <div>
-                <span class="text-6xl">30<span class="text-sm">PPM</span></span>                 
+                <!-- <span class="text-6xl">30<span class="text-sm">PPM</span></span>                  -->
                 <?php 
                 
                   // $result = mysqli_query($conn, $select);
